@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+  <head>
+
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+
+    <title>File Upload</title>
+
+  </head>
+
+
+  <body>
+
+    <h3>Please upload an Excel file for User Registration data...</h3>
+
+
+    Select a file to upload: <br /><br />
+
+    <form action = "/UploadHandlerServlet" method = "post"
+
+         enctype = "multipart/form-data">
+ 
+         <input type = "file" name = "file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" />
+
+         <br />
+
+         <input type = "submit" value = "Upload File" />
+
+    </form>
+
+     
+ 
+    <h3>Try logging in...</h3>
+
+      <input type="button" value="Login" onClick="openPage('login.jsp')" />
+
+     
+ 
+    <script type="text/javascript">
+
+function openPage(pageURL) {
+
+    window.location.href = pageURL;
+}
+
+    </script>
+
+  </body>
+
+</html>
