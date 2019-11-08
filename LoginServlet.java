@@ -1,4 +1,4 @@
-package assignment;
+package Servlets;
 
 import java.io.IOException;
 
@@ -22,7 +22,8 @@ public class LoginServlet extends HttpServlet {
 
 	@Override
 	public void doPost(HttpServletRequest request, HttpServletResponse response) 
-      throws IOException, ServletException {
+      		throws IOException, ServletException 
+	{
 		DatastoreService ds = DatastoreServiceFactory.getDatastoreService();
 		
 		Filter f = new Query.FilterPredicate("Email", FilterOperator.EQUAL, request.getParameter("email"));
@@ -40,8 +41,9 @@ public class LoginServlet extends HttpServlet {
 	}
 	
 	@Override
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
-      throws IOException {
-        response.sendRedirect("/login.jsp");
-    }
+    	public void doGet(HttpServletRequest request, HttpServletResponse response)
+      		throws IOException 
+	{
+        	response.sendRedirect("/login.jsp");
+    	}
 }
